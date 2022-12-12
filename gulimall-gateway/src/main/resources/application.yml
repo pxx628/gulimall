@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: gulimall-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 121.4.30.161:8848
+        group: dev
+        namespace: 0b0cc574-c4d0-4699-bada-61f10b5fe670
+    gateway:
+      routes:
+        - id: baidu_route
+          uri: https://www.baidu.com
+          predicates:
+            - Path=/**
+server:
+  port: 88

@@ -1,14 +1,13 @@
 package com.pxx.gulimall.coupon.controller;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.web.bind.annotation.*;
 
 import com.pxx.gulimall.coupon.entity.CouponEntity;
 import com.pxx.gulimall.coupon.service.CouponService;
@@ -24,11 +23,33 @@ import com.pxx.common.utils.R;
  * @email pxx@gmail.com
  * @date 2022-12-11 09:44:49
  */
+@RefreshScope
 @RestController
 @RequestMapping("coupon/coupon")
 public class CouponController {
     @Autowired
     private CouponService couponService;
+
+    /**
+     * 测试feign
+     * @return
+     */
+    @RequestMapping("/testList")
+    public R lists(){
+        List<CouponEntity> list = couponService.list();
+
+        return R.ok().put("testList", list);
+    }
+    @Value("${coupon.user.name}")
+    private String name;
+
+    @Value("${coupon.user.age}")
+    private Integer age;
+
+    @GetMapping("/testConfig")
+    public R testConfig(){
+        return R.ok().put("name",name).put("age",age);
+    }
 
     /**
      * 列表

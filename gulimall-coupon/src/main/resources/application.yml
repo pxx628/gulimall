@@ -2,8 +2,16 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    url: jdbc:mysql://192.168.1.10:3306/gulimall_sms?useSSL=true&serverTimeZone=UTC&characterEncoding=utf-8
+    url: jdbc:mysql://121.4.30.161:3306/gulimall_sms?useSSL=true&serverTimeZone=UTC&characterEncoding=utf-8
     password: jp3212217
+#  application:
+#    name: gulimall-coupon
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 121.4.30.161:8848
+        group: coupon
+        namespace: b25a4e41-e6de-4391-82a3-d2201f4934ba
 
 mybatis-plus:
   mapper-locations: classpath:/mapper/**/*.xml
