@@ -5,13 +5,24 @@ spring:
     nacos:
       discovery:
         server-addr: 121.4.30.161:8848
-        group: dev
-        namespace: 0b0cc574-c4d0-4699-bada-61f10b5fe670
     gateway:
       routes:
-        - id: baidu_route
-          uri: https://www.baidu.com
+#高优先级放上面，低优先级放下面
+        - id: product_route
+          uri: lb://gulimall-product
           predicates:
-            - Path=/**
+            - Path=/api/product/**
+          filters:
+            - RewritePath=/api/?(?<segment>.*), /$\{segment}
+
+        - id: admin_route
+          uri: lb://renren-fast
+          predicates:
+            - Path=/api/**
+          filters:
+            - RewritePath=/api/?(?<segment>.*), /renren-fast/$\{segment}
+
+          #http://localhost:88/api/captcha.jpg?uuid=538705b9-ecb2-479e-899f-7ce4306e2f0b
+
 server:
   port: 88
