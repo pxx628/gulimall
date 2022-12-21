@@ -42,7 +42,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 121.4.30.161:8848
+        server-addr: 
   application:
     name: renren-fast
 #  resources:
