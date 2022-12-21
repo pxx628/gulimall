@@ -4,8 +4,8 @@ spring:
         druid:
             driver-class-name: com.mysql.cj.jdbc.Driver
             username: root
-            url: jdbc:mysql://121.4.30.161:3306/gulimall_admin?useSSL=true&serverTimeZone=UTC&characterEncoding=utf-8
-            password: jp3212217
+            url: 
+            password: 
             initial-size: 10
             max-active: 100
             min-idle: 10
