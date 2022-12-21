@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.pxx.gulimall.member.entity.MemberCollectSpuEntity;
 import com.pxx.gulimall.member.service.MemberCollectSpuService;
-import com.pxx.common.utils.PageUtils;
-import com.pxx.common.utils.R;
+import com.pxx.gulimall.common.utils.PageUtils;
+import com.pxx.gulimall.common.utils.R;
 
 
 

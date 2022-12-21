@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.pxx.gulimall.product.entity.CommentReplayEntity;
 import com.pxx.gulimall.product.service.CommentReplayService;
-import com.pxx.common.utils.PageUtils;
-import com.pxx.common.utils.R;
+import com.pxx.gulimall.common.utils.PageUtils;
+import com.pxx.gulimall.common.utils.R;
 
 
 

@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.pxx.gulimall.coupon.entity.SeckillSessionEntity;
 import com.pxx.gulimall.coupon.service.SeckillSessionService;
-import com.pxx.common.utils.PageUtils;
-import com.pxx.common.utils.R;
+import com.pxx.gulimall.common.utils.PageUtils;
+import com.pxx.gulimall.common.utils.R;
 
 
 

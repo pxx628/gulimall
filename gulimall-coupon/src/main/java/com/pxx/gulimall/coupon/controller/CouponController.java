@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.*;
 
 import com.pxx.gulimall.coupon.entity.CouponEntity;
 import com.pxx.gulimall.coupon.service.CouponService;
-import com.pxx.common.utils.PageUtils;
-import com.pxx.common.utils.R;
+import com.pxx.gulimall.common.utils.PageUtils;
+import com.pxx.gulimall.common.utils.R;
 
 
 

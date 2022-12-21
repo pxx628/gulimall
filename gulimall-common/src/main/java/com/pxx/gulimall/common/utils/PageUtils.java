@@ -6,7 +6,7 @@
  * 版权所有，侵权必究！
  */
 
-package com.pxx.common.utils;
+package com.pxx.gulimall.common.utils;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 

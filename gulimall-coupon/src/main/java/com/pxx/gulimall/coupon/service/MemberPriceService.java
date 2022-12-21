@@ -1,7 +1,7 @@
 package com.pxx.gulimall.coupon.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.pxx.common.utils.PageUtils;
+import com.pxx.gulimall.common.utils.PageUtils;
 import com.pxx.gulimall.coupon.entity.MemberPriceEntity;
 
 import java.util.Map;

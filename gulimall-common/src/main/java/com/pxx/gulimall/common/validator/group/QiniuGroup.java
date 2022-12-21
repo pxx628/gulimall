@@ -6,12 +6,12 @@
  * 版权所有，侵权必究！
  */
 
-package com.pxx.common.validator.group;
+package com.pxx.gulimall.common.validator.group;
 
 /**
- * 腾讯云
+ * 七牛
  *
  * @author Mark sunlightcs@gmail.com
  */
-public interface QcloudGroup {
+public interface QiniuGroup {
 }

@@ -6,7 +6,7 @@
  * 版权所有，侵权必究！
  */
 
-package com.pxx.common.exception;
+package com.pxx.gulimall.common.exception;
 
 /**
  * 自定义异常

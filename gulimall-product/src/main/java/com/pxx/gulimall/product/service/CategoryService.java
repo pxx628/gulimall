@@ -1,10 +1,9 @@
 package com.pxx.gulimall.product.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.pxx.common.utils.PageUtils;
+import com.pxx.gulimall.common.utils.PageUtils;
 import com.pxx.gulimall.product.entity.CategoryEntity;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 

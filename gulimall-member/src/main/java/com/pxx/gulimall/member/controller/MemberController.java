@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.*;
 
 import com.pxx.gulimall.member.entity.MemberEntity;
 import com.pxx.gulimall.member.service.MemberService;
-import com.pxx.common.utils.PageUtils;
-import com.pxx.common.utils.R;
+import com.pxx.gulimall.common.utils.PageUtils;
+import com.pxx.gulimall.common.utils.R;
 
 
 

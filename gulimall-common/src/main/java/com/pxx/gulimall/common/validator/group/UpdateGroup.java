@@ -6,12 +6,14 @@
  * 版权所有，侵权必究！
  */
 
-package com.pxx.common.validator.group;
+package com.pxx.gulimall.common.validator.group;
 
 /**
- * 新增数据 Group
+ * 更新数据 Group
  *
  * @author Mark sunlightcs@gmail.com
  */
-public interface AddGroup {
+
+public interface UpdateGroup {
+
 }

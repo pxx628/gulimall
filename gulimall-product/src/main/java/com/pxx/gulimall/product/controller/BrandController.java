@@ -1,9 +1,18 @@
 package com.pxx.gulimall.product.controller;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Map;
 
+import com.pxx.gulimall.common.utils.UpTencentUtils;
+import com.pxx.gulimall.common.validator.group.AddGroup;
+import com.pxx.gulimall.common.validator.group.UpdateGroup;
+import com.pxx.gulimall.common.validator.group.UpdateStatusGroup;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,9 +21,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.pxx.gulimall.product.entity.BrandEntity;
 import com.pxx.gulimall.product.service.BrandService;
-import com.pxx.common.utils.PageUtils;
-import com.pxx.common.utils.R;
+import com.pxx.gulimall.common.utils.PageUtils;
+import com.pxx.gulimall.common.utils.R;
 
+import javax.validation.Valid;
 
 
 /**
@@ -25,6 +35,7 @@ import com.pxx.common.utils.R;
  * @date 2022-12-10 17:02:56
  */
 @RestController
+@RefreshScope
 @RequestMapping("product/brand")
 public class BrandController {
     @Autowired
@@ -41,6 +52,8 @@ public class BrandController {
     }
 
 
+
+
     /**
      * 信息
      */
@@ -55,18 +68,39 @@ public class BrandController {
      * 保存
      */
     @RequestMapping("/save")
-    public R save(@RequestBody BrandEntity brand){
-		brandService.save(brand);
+    public R save(@Validated(AddGroup.class) @RequestBody BrandEntity brand/* , BindingResult result*/){
+//        if (result.hasErrors()){
+//            Map<String,String> map=new HashMap<>();
+//            result.getFieldErrors().forEach(item->{
+//                //获取请求错误的列名
+//                String field = item.getField();
+//                //获取默认错误提示
+//                String message = item.getDefaultMessage();
+//                map.put(field,message);
+//            });
+//            return R.error(400,"数据异常").put("data",map);
+//        }else {
+            brandService.save(brand);
+            return R.ok();
+//        }
 
-        return R.ok();
     }
 
     /**
      * 修改
      */
     @RequestMapping("/update")
-    public R update(@RequestBody BrandEntity brand){
+    public R update(@Validated(UpdateGroup.class) @RequestBody BrandEntity brand){
 		brandService.updateById(brand);
+
+        return R.ok();
+    }
+    /**
+     * 修改
+     */
+    @RequestMapping("/update/status")
+    public R updateStatus(@Validated(UpdateStatusGroup.class) @RequestBody BrandEntity brand){
+        brandService.updateById(brand);
 
         return R.ok();
     }

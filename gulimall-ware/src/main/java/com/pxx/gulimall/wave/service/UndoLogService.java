@@ -1,7 +1,7 @@
 package com.pxx.gulimall.wave.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.pxx.common.utils.PageUtils;
+import com.pxx.gulimall.common.utils.PageUtils;
 import com.pxx.gulimall.wave.entity.UndoLogEntity;
 
 import java.util.Map;

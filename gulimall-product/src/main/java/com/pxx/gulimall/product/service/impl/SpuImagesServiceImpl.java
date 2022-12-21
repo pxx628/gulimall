@@ -5,8 +5,8 @@ import java.util.Map;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.pxx.common.utils.PageUtils;
-import com.pxx.common.utils.Query;
+import com.pxx.gulimall.common.utils.PageUtils;
+import com.pxx.gulimall.common.utils.Query;
 
 import com.pxx.gulimall.product.dao.SpuImagesDao;
 import com.pxx.gulimall.product.entity.SpuImagesEntity;

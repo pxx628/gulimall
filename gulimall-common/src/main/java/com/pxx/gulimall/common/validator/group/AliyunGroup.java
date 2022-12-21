@@ -6,7 +6,7 @@
  * 版权所有，侵权必究！
  */
 
-package com.pxx.common.validator.group;
+package com.pxx.gulimall.common.validator.group;
 
 /**
  * 阿里云
